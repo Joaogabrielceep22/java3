@@ -34,7 +34,32 @@ for(var i = 0; i < pacientes.length ; i++){
     }
     
     if( alturaEhValida && pesoEhValido){
-    var imc = peso / (altura * altura);
-    tdImc.textContent = imc.toFixed(2);
+        var imc = peso / (altura * altura);
+        tdImc.textContent = imc.toFixed(2);
     }
 }
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click",function(event){
+    event.preventDefault();
+    
+    var form = document.querySelector("#form-adiciona");
+
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+
+    console.log(nome);
+    console.log(peso);
+    console.log(altura);
+    console.log(gordura);
+
+
+});
+
+titulo.addEventListener("click",function () {
+    console.log("fui clicadio");
+});
+
+//
